@@ -1,0 +1,1 @@
+*In this folder we have the Stateful components (Smart component) where we keep tracking the state.

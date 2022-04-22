@@ -1,0 +1,2 @@
+*It contains layout files such as Navbar, Footer, Sidebar .
+Layouts are used to wrap a specific components.

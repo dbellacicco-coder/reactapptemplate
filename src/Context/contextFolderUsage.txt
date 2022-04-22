@@ -1,0 +1,1 @@
+*This folder contains all the context files where we manage and globalize the state in our application such as theming styles.

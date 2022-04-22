@@ -1,0 +1,1 @@
+*In this folder we manage all of the API requests by creating files for each service.

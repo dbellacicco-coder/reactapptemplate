@@ -1,0 +1,3 @@
+This folder is made for multi-language support.
+You can create subfolders with a JSON file for each language you want to translate.
+Take a look to their Step by Step guide https://react.i18next.com/latest/using-with-hooks.

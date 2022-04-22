@@ -1,0 +1,1 @@
+*Here we create and export functions that will be re-used in different places in our application.
