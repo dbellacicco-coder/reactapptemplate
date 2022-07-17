@@ -1,27 +1,27 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
 import LogoImg from "../assets/images/luzbakerylogo.png";
+import TartaSirenita from "../assets/images/tartaSirenita.png";
 
 const HeroSection = () => {
   return (
-    <Grid
-      container
-      direction="column"
-      justifyContent="space-between"
-      alignItems="center"
-      style={{ backgroundColor: "#272318", width: "100%" }}
-    >
-      <Grid item>
-        <Typography variant="h2" color="white">
+    <Grid container style={{ backgroundColor: "#ffe0fc", width: "100%" }}>
+      <Grid
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+        xs={12}
+        md={8}
+        item
+      >
+        <Typography variant="h4" color="#b65fa4">
           Los Manjares de luz{" "}
         </Typography>
-      </Grid>
-      <Grid item>
-        <Typography color="white" variant="h4">
-          Texto de la libreria typical
+        <Typography variant="h6" color="#b65fa4">
+          Sorprendeme con ideas dulces para disfrutar momentos unicos.
         </Typography>
-      </Grid>
-      <Grid item>
         <img
           style={{
             width: "400px",
@@ -31,6 +31,20 @@ const HeroSection = () => {
           }}
           alt="manjares de luz "
           src={LogoImg}
+        />
+      </Grid>
+      <Grid xs={12} md={4} item>
+        <Typography color="#b65fa4" variant="h4">
+          Tartas por encargo en Madrid...!!!
+        </Typography>
+        <img
+          style={{
+            width: "250px",
+            height: "250px",
+            borderRadius: "50%",
+          }}
+          alt="manjares de luz "
+          src={TartaSirenita}
         />
       </Grid>
     </Grid>

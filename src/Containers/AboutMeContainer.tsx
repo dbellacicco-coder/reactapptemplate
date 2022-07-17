@@ -5,23 +5,10 @@ import yoIMG from "../assets/images/yoLuz.png";
 export const AboutMeContainer = () => {
   return (
     <div style={{ textAlign: "center" }}>
-      <h1
-        style={{
-          display: "inline",
-          borderBottom: "1px solid #b65fa4 ",
-          margin: "0px",
-          textAlign: "center",
-          color: "white",
-        }}
-      >
-        {" "}
-        Sobre Nosotros
-      </h1>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <h1 style={{ color: "white" }}> ¿...Quienes somos...?</h1>
-            <p style={{ fontSize: "20px", color: "white" }}>
+            <p style={{ fontSize: "20px", color: "#b65fa4" }}>
               Soy Luz Salcedo, venezolana, residenciada en Madrid desde hace más
               de 10 años, de profesión ingeniero, me inicié en el mundo de la
               repostería como hobby, me encantaba hacer postres y tartas, los

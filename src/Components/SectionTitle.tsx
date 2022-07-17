@@ -1,20 +1,26 @@
 import { Typography } from "@mui/material";
 import React from "react";
 
-const SectionTitle = () => {
-  return (
-    <Typography
-      style={{
-        display: "inline",
-        borderBottom: "1px solid #b65fa4 ",
-        margin: "0px",
+type SectionTitleT = {
+  text: string;
+};
 
-        color: "#b65fa4",
-      }}
-    >
-      {" "}
-      Productos y Servicios
-    </Typography>
+const SectionTitle = ({ text }: SectionTitleT) => {
+  return (
+    <div style={{ textAlign: "center" }}>
+      <Typography
+        variant="h3"
+        style={{
+          display: "inline",
+          borderBottom: "1px solid #b65fa4 ",
+          margin: "0px",
+          color: "#b65fa4",
+        }}
+      >
+        {" "}
+        {text}
+      </Typography>
+    </div>
   );
 };
 

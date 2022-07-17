@@ -8,10 +8,10 @@ import {
 } from "@mui/material";
 import React from "react";
 import ProductInfoCard from "../Components/ProductInfoCard";
+import saltyBG from "../assets/images/Bg/saltyBackground.jpg";
+import sweetBG from "../assets/images/Bg/sweetBackground.jpg";
+import customBG from "../assets/images/customized/TARTA OSITA.jpg";
 import SectionTitle from "../Components/SectionTitle";
-import saltyBG from "../assets/images/Bg/saltyBG.jpg";
-import sweetBG from "../assets/images/Bg/sweetBG.jpg";
-import customBG from "../assets/images/Bg/personalizadoBG.jpg";
 
 const services = [
   {
@@ -20,6 +20,7 @@ const services = [
       "Una gran variedad de tartas, punCakes , bolleria que te endulzaran el dia",
     img: sweetBG,
     atriution: "DesignedbyMacrovector",
+    linkPage: "dulces",
   },
   {
     title: "Salados",
@@ -27,12 +28,14 @@ const services = [
       "Ponle sabor a tu mesa y acompaña el postre con nuestros productos salados",
     img: saltyBG,
     atribution: "https://www.freepik.es/fotos/pan-casero",
+    linkPage: "Salados",
   },
   {
     title: "Personalizado",
     description:
       "Diseño a la medida , no te cortes pide que nosotros te lo hacemos",
     img: customBG,
+    linkPage: "tartas",
     // <a href="https://www.freepik.es/fotos/pastel-chocolate">Foto de pastel de chocolate creado por azerbaijan_stockers - www.freepik.es</a>
   },
 ];
@@ -47,7 +50,7 @@ const ProductsInfo = () => {
           textAlign: "center",
         }}
       >
-        <SectionTitle />
+        <SectionTitle text="Productos" />
 
         <Grid
           direction="row"

@@ -14,6 +14,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Button, Link } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -52,6 +54,17 @@ const ProductInfoCard = ({ service }: any) => {
         <Typography variant="body2" color="text.secondary">
           {service.description}
         </Typography>
+
+        <NavLink
+          style={{
+            textDecoration: "none",
+            fontSize: "25px",
+            color: "#b65fa4 ",
+          }}
+          to={service.linkPage}
+        >
+          ver màs
+        </NavLink>
       </CardContent>
     </Card>
   );

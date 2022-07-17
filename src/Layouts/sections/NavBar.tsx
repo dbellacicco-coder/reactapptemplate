@@ -13,12 +13,17 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logoImg from "../../assets/images/luzbakerylogo.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 const pages = [
-  { name: "Inicio", link: "inicio" },
-  { name: "Productos", link: "productos" },
-  { name: "Contacto", link: "contacto" },
+  { name: "Inicio", link: "" },
+  { name: "Tartas", link: "tartas" },
+  { name: "Dulces", link: "dulces" },
+  { name: "Salados", link: "salados" },
+  { name: "Quien soy", link: "quiensoy" },
+  { name: "Encargos", link: "encargos" },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -65,25 +70,13 @@ const ResponsiveAppBar = () => {
               </IconButton>
             </Tooltip>
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
+
+          <Box
             sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".1rem",
-              color: "#ffffff",
-              textDecoration: "none",
+              flexGrow: 1,
+              display: { xs: "flex", md: "none", width: "100%" },
             }}
           >
-            Manjares de Luz
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -112,13 +105,15 @@ const ResponsiveAppBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
+              {/* aqui va el menu responsive */}
+
               {pages.map((page) => (
                 <NavLink
                   to={`/${page.link}`}
                   key={page.name}
                   onClick={handleCloseNavMenu}
                   style={{
-                    color: "black",
+                    color: "#99d9ea",
                     display: "block",
                     marginRight: "25px",
                     textDecoration: "none",
@@ -132,7 +127,13 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+          <Box
+            sx={{
+              display: { xs: "flex", md: "none" },
+              alignItems: "center",
+              mr: 1,
+            }}
+          >
             <Tooltip title="Los Manjares de Luz">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <img
@@ -148,51 +149,59 @@ const ResponsiveAppBar = () => {
               </IconButton>
             </Tooltip>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Manjares de Luz
-          </Typography>
+
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex" },
+              display: {
+                xs: "none",
+                md: "flex",
+                justifyContent: "space-around",
+              },
               marginLeft: "60px",
             }}
           >
-            {pages.map((page) => {
-              return (
-                <NavLink
-                  to={`/${page.link}`}
-                  key={page.name}
-                  onClick={handleCloseNavMenu}
-                  style={{
-                    color: "white",
-                    display: "block",
-                    marginRight: "25px",
-                    textDecoration: "none",
-                  }}
-                >
-                  <Typography style={{ fontSize: "25px" }}>
-                    {" "}
-                    {page.name}{" "}
-                  </Typography>
-                </NavLink>
-              );
-            })}
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: "flex",
+              }}
+            >
+              {pages.map((page) => {
+                return (
+                  <NavLink
+                    to={`/${page.link}`}
+                    key={page.name}
+                    onClick={handleCloseNavMenu}
+                    style={{
+                      color: "white",
+                      display: "block",
+                      marginRight: "25px",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <Typography style={{ fontSize: "18px" }}>
+                      {page.name.toUpperCase()}{" "}
+                    </Typography>
+                  </NavLink>
+                );
+              })}
+            </Box>
+            <Box>
+              <FacebookIcon
+                onClick={(event) =>
+                  (window.location.href =
+                    "https://www.facebook.com/losmanjaresdeluz")
+                }
+              />
+
+              <InstagramIcon
+                onClick={(event) =>
+                  (window.location.href =
+                    "https://www.instagram.com/losmanjaresdeluz/?hl=es")
+                }
+              />
+            </Box>
           </Box>
         </Toolbar>
       </Container>

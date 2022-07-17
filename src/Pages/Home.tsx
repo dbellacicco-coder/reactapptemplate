@@ -9,9 +9,9 @@ import { AboutMeContainer } from "../Containers/AboutMeContainer";
 
 const Home = () => {
   return (
-    <div style={{ backgroundColor: "#5d0062", width: "100%" }}>
+    <div style={{ width: "100%" }}>
       <HeroSection />
-      <AboutMeContainer />
+      {/*<AboutMeContainer />*/}
       <ProductsInfo />
       <FormContainer />
     </div>
